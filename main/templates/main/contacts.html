@@ -1,0 +1,35 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Контакты
+{% endblock %}
+
+{% block content %}
+<h1>Напишите нам</h1>
+<form action="#"> Имя
+    <br>
+    <input type="text" placeholder="Ваше имя" required>
+    <br> Телефон
+    <br>
+    <input type="text" placeholder="Телефон">
+    <br> Почта
+    <br>
+    <input type="text" placeholder="Ваш email адрес" required>
+    <br> Тема
+    <br>
+    <input type="text" placeholder="Тема письма" required>
+    <br> Текст сообщения
+    <br>
+    <textarea placeholder="Введите ваше сообщение" required></textarea>
+    <br>
+    <input type="submit" value="Отправить сообщение">
+    <input type="reset"> </form>
+<h1>Контактная информация</h1>
+<ul>
+    <li>Наш адрес: Москва, улица Цюрупы, 15</li>
+    <li>Телефон: 9-18</li>
+    <li>Факс: 4-12, добавочный 03</li>
+    <li>Самовывоз из Нижнего Тагила</li>
+    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A70e56e4228fb14acbfa0c1553c47b976a1bf77480d47220581ac8c1abaf46e0e&amp;source=constructor" width="300" height="150" frameborder="1"></iframe>
+</ul>
+{% endblock %}

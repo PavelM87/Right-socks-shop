@@ -1,0 +1,169 @@
+body {
+    background-color: #f8f8f8;
+}
+
+.menu li {
+    font-family: monospace;
+    color: brown;
+    font-size: 16px;
+    font-style: normal;
+    list-style-type: none;
+    border: 1px solid #930;
+    width: 100px;
+    height: 30px;
+    text-align: center
+}
+
+.menu li a {
+    color: coral;
+    font-family: monospace;
+    font-size: 16px;
+}
+
+.menu li a:hover,
+.product a:hover,
+.catalog li a:hover {
+    color: brown;
+}
+
+.menu li a:active,
+.product a:active,
+.catalog li a:active {
+    color: red;
+}
+
+.menu li:first-child {
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+    
+}
+
+.menu li:last-child {
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+    
+}
+
+.menu li:hover:before {
+    content: ">";
+    color: chartreuse;
+}
+
+.catalog li {
+    list-style-type:none
+}
+
+h3 {
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: #eaeaea;
+}
+
+.short +p {
+    color: #707070;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 16px;
+}
+
+.full +p {
+    color: #484343;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+    line-height: 24px;
+}
+
+.char +ul {
+    color: darkslategrey;
+    font-size: 15px;
+    font-family: sans-serif;
+    list-style-image: url(img/apply.png)
+}
+
+input[type=text],
+textarea {
+    height: 20px;
+    width: 200px;
+}
+
+
+input[type=submit],
+input[type=reset] {
+    background-color: burlywood;
+    width: 200px;
+}
+
+input::-webkit-input-placeholder {
+    color: burlywood;
+    font-size: 14px;
+    font-style: italic;
+}
+
+input:-moz-placeholder {
+    color: burlywood;
+    font-size: 14px;
+    font-style: italic;
+}
+
+textarea::-webkit-input-placeholder {
+    color: burlywood;
+    font-size: 14px;
+    font-style: italic;
+}
+
+textarea:-moz-placeholder {
+    color: burlywood;
+    font-size: 14px;
+    font-style: italic;
+}
+
+body a {
+    color: coral;
+    font-family:cursive;
+    font-size: 12px;
+}
+
+.table {
+    border: 1px solid #931;
+    width: 400px;
+    height: 200px;
+    border-collapse: collapse;
+}
+
+.table td {
+    border: 1px solid #931;
+    padding-left: 10px;
+}
+
+.table tr:first-child {
+    height: 20px;
+}
+.header img {
+    width: 80px;
+    height: 80px;
+    line-height: 100px;
+}
+.menu {
+    display:inline-block;
+}
+input[placeholder="Ваш email адрес"]:focus {
+    background-color:cornsilk;
+    color: darkgoldenrod;
+}
+textarea, input[type="text"]:focus {
+    text-transform: capitalize;
+}
+a img {
+    outline: 1px solid brown;
+}
+a img:hover {
+    outline: none;
+}
+.product>p:first-letter {
+    font-size: 150%;
+    font-family:sans-serif;
+    color: cadetblue;
+    
+}

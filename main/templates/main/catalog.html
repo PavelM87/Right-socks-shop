@@ -1,0 +1,23 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Каталог
+{% endblock %}
+
+{% block content %}
+<h1>Каталог</h1>
+    <ul class="catalog">
+        <li>
+            <a href="{% url 'item-classic' %}"><img src="../static/img/right_sock_sm.jpg" alt="classic">
+                <br>Классический правый носок</a>
+        </li>
+        <li>
+            <a href="{% url 'item-funeral' %}"><img src="../../static/img/funeral_sm.jpg" alt="funeral">
+                <br>Похоронный носок</a>
+        </li>
+        <li>
+            <a href="{% url 'item-cat' %}"><img src="../../static/img/cat_face_sm.jpg" alt="cat_face">
+                <br>С кошачьей мордой</a>
+        </li>
+    </ul>
+{% endblock %}

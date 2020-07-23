@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>
+    {% block title %}
+    {% endblock %}
+</title>
+<link rel="stylesheet" href="../static/css/style.css"> </head>
+
+<body>
+<div class="header"> <img src="../static/img/logo.png" alt="">
+    <ul class="menu">
+        <li><a href="{% url 'home' %}">Главная</a></li>
+        <li><a href="{% url 'catalog' %}">Каталог</a></li>
+        <li><a href="{% url 'contacts' %}">Контакты</a></li>
+    </ul>
+</div>
+<hr>
+    {% block content %}
+    {% endblock %}
+<div class="footer">
+<hr>
+<p>Все права защищены &copy;&nbsp;2020</p>
+</div>
+</body>
+
+</html>
