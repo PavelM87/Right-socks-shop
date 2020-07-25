@@ -1,56 +1,19 @@
+
+/* Общие настройк */
+
+
 body {
     background-color: #f8f8f8;
 }
 
-.menu li {
-    font-family: monospace;
-    color: brown;
-    font-size: 16px;
-    font-style: normal;
-    list-style-type: none;
-    border: 1px solid #930;
-    width: 100px;
-    height: 30px;
-    text-align: center
-}
-
-.menu li a {
-    color: coral;
-    font-family: monospace;
-    font-size: 16px;
-}
-
-.menu li a:hover,
-.product a:hover,
-.catalog li a:hover {
-    color: brown;
-}
-
-.menu li a:active,
-.product a:active,
-.catalog li a:active {
-    color: red;
-}
-
-.menu li:first-child {
-    border-top-right-radius: 7px;
-    border-top-left-radius: 7px;
+h1 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 900;
+    color: azure;
+    background-color:coral;
+    opacity: 0.9;
     
-}
-
-.menu li:last-child {
-    border-bottom-right-radius: 7px;
-    border-bottom-left-radius: 7px;
-    
-}
-
-.menu li:hover:before {
-    content: ">";
-    color: chartreuse;
-}
-
-.catalog li {
-    list-style-type:none
 }
 
 h3 {
@@ -59,6 +22,90 @@ h3 {
     font-weight: 400;
     background-color: #eaeaea;
 }
+
+body a {
+    color: coral;
+    font-family:cursive;
+    font-size: 12px;
+}
+
+hr {
+    width: 100%;
+    margin-bottom: 0;
+    margin-top: 0;
+	padding: 0;
+	height: 0;
+	border: none;
+	border-width: 0 0 5px;
+	border-style: solid;
+	border-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2 1" width="8" height="4"><circle fill="coral" cx="1" cy="0.5" r="0.5"></circle></svg>') 0 0 100% repeat;
+	background-position: 50%;
+	box-sizing: border-box;
+	color: orange;
+}
+
+.body {
+  min-height: calc(100vh - 100px);
+    clear: both;
+}
+
+/* Шапка */
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    height:120px;
+    background-color:beige;
+}
+
+.logo img {
+    width: 90px;
+    height: 90px;
+}
+
+.logo {
+    margin-top: 10px;
+    margin-left: 30px;
+    float: left;
+}
+
+.menu div {
+    float: right;
+    line-height: 120px;
+    margin-right: 20px;
+    font-size: 24px;
+}
+
+.menu div a {
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.menu div a:hover {
+    color: brown;
+}
+
+
+/* Главная */
+
+.main p {
+    text-align: left;
+    font-family:sans-serif;
+    color:brown
+}
+
+.main {
+    text-align: center
+}
+
+.main img {
+    width: 100%;
+}
+
+/* Товар каталога */
 
 .short +p {
     color: #707070;
@@ -82,47 +129,55 @@ h3 {
     list-style-image: url(img/apply.png)
 }
 
-input[type=text],
-textarea {
-    height: 20px;
-    width: 200px;
+.product .body>p:first-letter {
+    font-size: 150%;
+    font-family:sans-serif;
+    color: cadetblue;
 }
 
-
-input[type=submit],
-input[type=reset] {
-    background-color: burlywood;
-    width: 200px;
-}
-
-input::-webkit-input-placeholder {
-    color: burlywood;
+.itemlink a {
     font-size: 14px;
-    font-style: italic;
+    text-decoration:none;
 }
 
-input:-moz-placeholder {
-    color: burlywood;
-    font-size: 14px;
-    font-style: italic;
+.itemlink {
+    margin-bottom: 10px;
 }
 
-textarea::-webkit-input-placeholder {
-    color: burlywood;
-    font-size: 14px;
-    font-style: italic;
+.body a img {
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    margin-top: 19px;
+    overflow: hidden
 }
 
-textarea:-moz-placeholder {
-    color: burlywood;
-    font-size: 14px;
-    font-style: italic;
+.full {
+    clear: both;
 }
 
-body a {
+input[type="button"] {
+    height: 60px;
+    width: 120px;
+    font-size:24px;
     color: coral;
-    font-family:cursive;
-    font-size: 12px;
+    background-color: azure;
+    border-radius: 9px;
+    outline: none;
+    margin-top: 50px;
+}
+
+input[type="button"]:hover {
+    color: blue;
+}
+
+input[type="button"]:active {
+    background-color: coral;
+    border-radius: 9px;
+}
+
+.instruct h3{
+    text-align: center;
 }
 
 .table {
@@ -140,30 +195,129 @@ body a {
 .table tr:first-child {
     height: 20px;
 }
-.header img {
-    width: 80px;
-    height: 80px;
-    line-height: 100px;
+
+/* Контакты */
+
+input[type=text] {
+    height: 20px;
+    width: 300px;
+    border-radius: 5px;
+    border-color:beige;
+    background-color: azure
 }
-.menu {
-    display:inline-block;
+
+textarea {
+    height: 40px;
+    width: 300px;
+    border-radius: 5px;
+    border-color:beige;
+    background-color: azure;
+    margin-bottom: 10px;
 }
+input[type=submit],
+input[type=reset] {
+    background-color:bisque;
+    width: 151px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+input::-webkit-input-placeholder {
+    color:coral;
+    font-size: 14px;
+    font-style: italic;
+}
+
+input:-moz-placeholder {
+    color: coral;
+    font-size: 14px;
+    font-style: italic;
+}
+
+textarea::-webkit-input-placeholder {
+    color: coral;
+    font-size: 14px;
+    font-style: italic;
+}
+textarea:-moz-placeholder {
+    color: burlywood;
+    font-size: 14px;
+    font-style: italic;
+}
+
 input[placeholder="Ваш email адрес"]:focus {
     background-color:cornsilk;
     color: darkgoldenrod;
 }
-textarea, input[type="text"]:focus {
+
+input[type="text"]:focus {
     text-transform: capitalize;
 }
+
+input[type=reset]:hover {
+    color: azure;
+    background-color:chocolate;
+}
+
+input[type=submit]:hover {
+    color: azure;
+    background-color:chocolate;
+}
+
+input[type=submit]:active {
+    color: azure;
+    background-color:darkgoldenrod;
+}
+
+input[type=reset]:active {
+    color: azure;
+    background-color:darkgoldenrod;
+}
+
+iframe {
+    width: 100%;
+    height: 374px;
+    margin-top: 20px;
+}
+
+/* Каталог */
+
 a img {
     outline: 1px solid brown;
 }
+
 a img:hover {
     outline: none;
 }
-.product>p:first-letter {
-    font-size: 150%;
-    font-family:sans-serif;
-    color: cadetblue;
+
+.item {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.item a {
+    font-size: 18px;
+}
+
+.catalog {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     
+}
+
+/* Подвал */
+
+.footer {
+    height: 100px;
+    background-color:azure;
+}
+
+.footer p {
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+    font-style:oblique;
+    font-size: 24px;
 }
