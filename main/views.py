@@ -12,10 +12,10 @@ def contacts(request):
     return render(request, 'main/contacts.html')
 
 def classic(request):
-    return render(request, 'main/classic.html')
+    return render(request, 'main/catalog/classic.html')
 
 def funeral(request):
-    return render(request, 'main/funeral.html')
+    return render(request, 'main/catalog/funeral.html')
 
 def cat_face(request):
-    return render(request, 'main/cat_face.html')
+    return render(request, 'main/catalog/cat_face.html')

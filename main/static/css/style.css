@@ -149,7 +149,10 @@ hr {
     margin-right: 30px;
     margin-bottom: 10px;
     margin-top: 19px;
-    overflow: hidden
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+
 }
 
 .full {

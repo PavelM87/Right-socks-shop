@@ -1,0 +1,41 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+<div class="body">
+        <h1>
+            {% block item_name %}
+            {% endblock %}
+        </h1>
+        <br>
+        <a href="../../static/img/{% block item_fullphoto %}{% endblock %}
+" target="_blank"> <img src="../../static/img/{% block item_photo %}{% endblock %}
+" alt="pic"> </a>
+        <h3 class="short">В двух словах</h3>
+        <p>
+            {% block item_shortdescr %}
+            {% endblock %}
+        </p>
+        <input type="button" value="Купить">
+        <h3 class="full">Описание</h3>
+        <p>
+            {% block item_fulldescr %}
+            {% endblock %}
+        </p>
+        <h3 class="char">Характеристики</h3>
+        {% block item_chars %}
+        {% endblock %}
+ <div class="instruct">
+            <h3>Инструкция</h3>
+            <ol>
+                <li>Убедитесь что у вас есть правая нога.</li>
+                <li>Возьмите носок и немного растяните его руками, чтобы носок легче было надеть.</li>
+                <li>Засуньте в носок большие пальцы рук и натяните на них носок "гармошкой".</li>
+                <li>Вставьте ступню в носок и движением "на себя" расправьте ткань.</li>
+            </ol>
+        </div>
+        <div class="itemlink"> <a href="{% url 'item-funeral' %}">Псст! Эй, приятель! Хочешь ещё немного правых носков? . .</a> </div>
+    </div>
+{% endblock %}
