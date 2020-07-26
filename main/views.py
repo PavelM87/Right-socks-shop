@@ -19,3 +19,6 @@ def funeral(request):
 
 def cat_face(request):
     return render(request, 'main/catalog/cat_face.html')
+
+def pink(request):
+    return render(request, 'main/catalog/pink.html')
