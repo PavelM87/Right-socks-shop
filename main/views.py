@@ -13,6 +13,7 @@ def contacts(request):
     return render(request, 'main/contacts.html')
 
 
-def item(response, item_slug): # эта для того, чтобы можно было перейти на страницу отдельного поста
-    item = Product.objects.get(slug = item_slug) # выбираем по id
-    return render(response, 'main/item_base.html', {'item': item})
+def item(response, item_slug):
+    item = Product.objects.get(slug = item_slug)
+    specific = Specification.objects.get(product = item.id)
+    return render(response, 'main/item_base.html', {'item': item,'specific': specific})
