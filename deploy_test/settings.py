@@ -115,6 +115,10 @@ USE_L10N = True
 
 USE_TZ = True
 
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 # Heroku: Update database configuration from $DATABASE_URL.
 import dj_database_url

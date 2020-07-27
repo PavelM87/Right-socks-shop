@@ -1,32 +1,31 @@
 {% extends 'main/base.html' %}
 
 {% block title %}
+{{ item.title }}
 {% endblock %}
 
 {% block content %}
 <div class="body">
         <h1>
-            {% block item_name %}
-            {% endblock %}
+            {{ item.title }}
         </h1>
         <br>
-        <a href="../../static/img/{% block item_fullphoto %}{% endblock %}
-" target="_blank"> <img src="../../static/img/{% block item_photo %}{% endblock %}
-" alt="pic"> </a>
+        <a href="{{ item.image.url }}" target="_blank"> <img src="{{ item.image.url }}" alt="pic"> </a>
         <h3 class="short">В двух словах</h3>
         <p>
-            {% block item_shortdescr %}
-            {% endblock %}
+            {{ item.short_descr }}
         </p>
-        <input type="button" value="Купить">
+        <div class="price">
+            <p>Цена:
+            {{ item.price }}
+            </p>
+        <input type="button" value="Купить"></div>
         <h3 class="full">Описание</h3>
         <p>
-            {% block item_fulldescr %}
-            {% endblock %}
+           {{ item.full_descr|safe  }}
         </p>
         <h3 class="char">Характеристики</h3>
-        {% block item_chars %}
-        {% endblock %}
+        {{ item.specific|safe  }}
  <div class="instruct">
             <h3>Инструкция</h3>
             <ol>
@@ -36,6 +35,6 @@
                 <li>Вставьте ступню в носок и движением "на себя" расправьте ткань.</li>
             </ol>
         </div>
-        <div class="itemlink"> <a href="{% url 'item-funeral' %}">Псст! Эй, приятель! Хочешь ещё немного правых носков? . .</a> </div>
+        <div class="itemlink"> <a href="{% url 'catalog' %}">Псст! Эй, приятель! Хочешь ещё немного правых носков? . .</a> </div>
     </div>
 {% endblock %}

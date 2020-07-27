@@ -163,11 +163,11 @@ input[type="button"] {
     height: 60px;
     width: 120px;
     font-size:24px;
-    color: coral;
+    color: green;
     background-color: azure;
     border-radius: 9px;
     outline: none;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 input[type="button"]:hover {
@@ -177,6 +177,12 @@ input[type="button"]:hover {
 input[type="button"]:active {
     background-color: coral;
     border-radius: 9px;
+}
+
+.price {
+    font-size: 24px;
+    font-family: monospace;
+    color: green;
 }
 
 .instruct h3{
@@ -315,6 +321,7 @@ a img:hover {
 .footer {
     height: 100px;
     background-color:azure;
+
 }
 
 .footer p {

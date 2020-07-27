@@ -1,12 +1,17 @@
 from django.db import models
+from django.db.models.signals import pre_save
+from .utils import unique_slug_generator
+
 
 class Product(models.Model):
+    slug = models.SlugField(unique=True, null=True, blank=True)
     title = models.CharField('Название', max_length=50)
     short_descr = models.CharField('Краткое описание', max_length=100)
     full_descr = models.TextField('Описание')
-    image = models.ImageField('Изображение')
+    image = models.ImageField('Изображение', upload_to='images/')
     specific = models.TextField('Характеристики')
     price = models.IntegerField('Цена')
+
 
     def __str__(self):
         return self.title
@@ -26,8 +31,8 @@ class Specification(models.Model):
         return self.title
 
     class Meta:
-        verbose_name = 'Характеристика'
-        verbose_name_plural = 'Характеристики'
+        verbose_name = 'Характеристика товара'
+        verbose_name_plural = 'Характеристики товаров'
 
 """class Mail(models.Model):
     name = models.CharField('Имя', max_length=50, blank=True)
@@ -36,8 +41,11 @@ class Specification(models.Model):
     topic = models.CharField('Тема', max_length=100, blank=True)
     message = models.TextField('Сообщение')"""
 
+def slug_generator(sender, instance, *args, **kwargs):
+	if not instance.slug:
+		instance.slug = unique_slug_generator(instance)
 
-
+pre_save.connect(slug_generator, sender = Product)
 
 
 
