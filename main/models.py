@@ -21,14 +21,14 @@ class Product(models.Model):
         verbose_name_plural = 'Продукты'
 
 class Specification(models.Model):
-    title = models.CharField('Название', max_length=50)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, default=None)
     size = models.CharField('Размеры', max_length=100)
     color = models.CharField('Цвет', max_length=50)
-    material = models.CharField('Материал', max_length=50)
-    print = models.BinaryField('Рисунок', max_length=50)
+    material = models.CharField('Материал', max_length=150)
+    print = models.BooleanField('Рисунок')
 
     def __str__(self):
-        return self.title
+        return str(self.product)
 
     class Meta:
         verbose_name = 'Характеристика товара'
