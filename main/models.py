@@ -25,7 +25,6 @@ class Specification(models.Model):
     size = models.CharField('Размеры', max_length=100)
     color = models.CharField('Цвет', max_length=50)
     material = models.CharField('Материал', max_length=150)
-    print = models.BooleanField('Рисунок')
 
     def __str__(self):
         return str(self.product)
