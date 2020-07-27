@@ -9,9 +9,7 @@ class Product(models.Model):
     short_descr = models.CharField('Краткое описание', max_length=100)
     full_descr = models.TextField('Описание')
     image = models.ImageField('Изображение', upload_to='images/')
-    specific = models.TextField('Характеристики')
     price = models.IntegerField('Цена')
-
 
     def __str__(self):
         return self.title
